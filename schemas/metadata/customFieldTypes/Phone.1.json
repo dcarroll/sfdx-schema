@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Phone",
+    "properties": {
+        "label": {
+            "title": "label",
+            "type": "string"
+        },
+        "fullName": {
+            "title": "fullName",
+            "type": "string"
+        },
+        "required": {
+            "title": "required",
+            "type": "boolean"
+        },
+        "description": {
+            "title": "description",
+            "type": "string"
+        },
+        "helpText": {
+            "title": "helpText",
+            "type": "string"
+        },
+        "defaultValue": {
+            "title": "defaultValue",
+            "type": "string"
+        }
+    }
+}

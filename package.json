@@ -1,0 +1,57 @@
+{
+    "name": "dsave",
+    "displayName": "dsave",
+    "description": "hook save for json to xml serialization",
+    "version": "0.0.1",
+    "publisher": "dcarroll",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.saveMe",
+        "onCommand:workbench.action.files.save"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.saveMe",
+                "title": "Save Me"
+            }
+        ],
+        "jsonValidation": [
+            {
+                "fileMatch": "**/*.field-meta.json",
+                "url": "./schemas/metadata/CustomFieldSchema.json"
+            },
+            {
+                "fileMatch": "**/*scratch-def.json",
+                "url": "./schemas/sfdx/scratch-def-schema.json"
+            }
+            ,
+            {
+                "fileMatch": "./sfdx-project.json",
+                "url": "./schemas/sfdx/project-def-schema.json"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "electron-rebuild": "^1.6.0",
+        "eslint": "^4.6.1",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "xml2json": "^0.11.0"
+    },
+    "dependencies": {
+        "node-expat": "^2.3.16"
+    }
+}
