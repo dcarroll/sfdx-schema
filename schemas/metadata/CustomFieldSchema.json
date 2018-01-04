@@ -6,10 +6,10 @@
         "CustomField": {
             "allOf": [
                 {
-                    "$ref": "MetadataSchema.json"
+                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/MetadataSchema.json"
                 },
                 {
-                    "$ref": "customFieldTypes/CustomField.json"
+                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/CustomField.json"
                 },
                 {
                     "oneOf": [
@@ -26,10 +26,10 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/CustomField.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/CustomField.json"
                                 },
                                 {
-                                    "$ref": "customFieldTypes/MasterDetail.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/MasterDetail.json"
                                 }
                             ]
                         },
@@ -46,7 +46,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/LongTextArea.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/LongTextArea.json"
                                 }
                             ]
                         },
@@ -63,7 +63,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/RichTextArea.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/RichTextArea.json"
                                 }
                             ]
                         },
@@ -80,7 +80,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/TextArea.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/TextArea.json"
                                 }
                             ]
                         },
@@ -97,7 +97,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/Url.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/Url.json"
                                 }
                             ]
                         },
@@ -114,7 +114,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/Phone.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/Phone.json"
                                 }
                             ]
                         },
@@ -131,7 +131,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/Text.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/Text.json"
                                 }
                             ]
                         },
@@ -148,7 +148,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/EncryptedText.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/EncryptedText.json"
                                 }
                             ]
                         },
@@ -165,7 +165,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/Checkbox.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/Checkbox.json"
                                 }
                             ]
                         },
@@ -182,7 +182,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/AutoNumber.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/AutoNumber.json"
                                 }
                             ]
                         },
@@ -199,7 +199,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/FloatingPoint.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/FloatingPoint.json"
                                 }
                             ]
                         },
@@ -216,7 +216,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/FloatingPoint.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/FloatingPoint.json"
                                 }
                             ]
                         },
@@ -233,7 +233,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/FloatingPoint.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/FloatingPoint.json"
                                 }
                             ]
                         },
@@ -250,7 +250,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/DateTime.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/DateTime.json"
                                 }
                             ]
                         },
@@ -267,7 +267,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/DateTime.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/DateTime.json"
                                 }
                             ]
                         },
@@ -284,7 +284,7 @@
                                     }
                                 },
                                 {
-                                    "$ref": "customFieldTypes/Email.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/customFieldTypes/Email.json"
                                 }
                             ]
                         },
@@ -402,7 +402,7 @@
                                 },
                                 "lookupFilter": {
                                     "title": "lookupFilter",
-                                    "$ref": "LookupFilterSchema.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/LookupFilterSchema.json"
                                 },
                                 "maskChar": {
                                     "title": "maskChar",
@@ -500,7 +500,7 @@
                                     "title": "summaryFilterItems",
                                     "type": "array",
                                     "items": {
-                                        "$ref": "FilterItemSchema.json"
+                                        "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/FilterItemSchema.json"
                                     },
                                     "minItems": 0
                                 },
@@ -532,7 +532,7 @@
                                 },
                                 "_type": {
                                     "title": "_type",
-                                    "$ref": "FieldTypeSchema.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/FieldTypeSchema.json"
                                 },
                                 "unique": {
                                     "title": "unique",
@@ -540,7 +540,7 @@
                                 },
                                 "valueSet": {
                                     "title": "valueSet",
-                                    "$ref": "ValueSetSchema.json"
+                                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/ValueSetSchema.json"
                                 },
                                 "visibleLines": {
                                     "title": "visibleLines",

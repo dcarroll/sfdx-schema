@@ -1,0 +1,236 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "SharedTo",
+    "properties": {
+            "allCustomerPortalUsers": {
+                "title": "allCustomerPortalUsers",
+                "type": "string"
+            },
+            "allInternalUsers": {
+                "title": "allInternalUsers",
+                "type": "string"
+            },
+            "allPartnerUsers": {
+                "title": "allPartnerUsers",
+                "type": "string"
+            },
+            "channelProgramGroup": {
+                "title": "channelProgramGroup",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "channelProgramGroups": {
+                "title": "channelProgramGroups",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "group": {
+                "title": "group",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "groups": {
+                "title": "groups",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "managerSubordinates": {
+                "title": "managerSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "managers": {
+                "title": "managers",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "portalRole": {
+                "title": "portalRole",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "portalRoleAndSubordinates": {
+                "title": "portalRoleAndSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "queue": {
+                "title": "queue",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "role": {
+                "title": "role",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "roleAndSubordinates": {
+                "title": "roleAndSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "roleAndSubordinatesInternal": {
+                "title": "roleAndSubordinatesInternal",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "roles": {
+                "title": "roles",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "rolesAndSubordinates": {
+                "title": "rolesAndSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "territories": {
+                "title": "territories",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "territoriesAndSubordinates": {
+                "title": "territoriesAndSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "territory": {
+                "title": "territory",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            },
+            "territoryAndSubordinates": {
+                "title": "territoryAndSubordinates",
+                "allOf": [
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0
+                    }
+                ]
+            }
+        
+    }
+}

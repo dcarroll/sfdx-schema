@@ -14,7 +14,7 @@
             "title":"value",
             "type":"array",
             "items":{
-                "$ref":"CustomValueSchema.json"
+                "$ref":"https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/CustomValueSchema.json"
             },
             "minItems":0
         }

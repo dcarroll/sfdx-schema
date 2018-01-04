@@ -1,0 +1,824 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "PermissionSet": {
+            "required": [
+                "label"
+            ],
+            "allOf": [
+                {
+                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/MetadataSchema.json"
+                },
+                {
+                    "type": "object",
+                    "title": "PermissionSet",
+                    "properties": {
+                        "applicationVisibilities": {
+                            "title": "applicationVisibilities",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetApplicationVisibility"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "applicationVisibilities",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "classAccesses": {
+                            "title": "classAccesses",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetApexClassAccess"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "classAccesses",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "customPermissions": {
+                            "title": "customPermissions",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetCustomPermissions"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "customPermissions",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "description": {
+                            "title": "description",
+                            "allOf": [
+                                {
+                                    "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "description",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "externalDataSourceAccesses": {
+                            "title": "externalDataSourceAccesses",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetExternalDataSourceAccess"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "externalDataSourceAccesses",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "fieldPermissions": {
+                            "title": "fieldPermissions",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetFieldPermissions"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "fieldPermissions",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "hasActivationRequired": {
+                            "title": "hasActivationRequired",
+                            "allOf": [
+                                {
+                                    "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "hasActivationRequired",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "label": {
+                            "title": "label",
+                            "allOf": [
+                                {
+                                    "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "label",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "license": {
+                            "title": "license",
+                            "allOf": [
+                                {
+                                    "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "license",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "objectPermissions": {
+                            "title": "objectPermissions",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetObjectPermissions"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "objectPermissions",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "pageAccesses": {
+                            "title": "pageAccesses",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetApexPageAccess"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "pageAccesses",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "recordTypeVisibilities": {
+                            "title": "recordTypeVisibilities",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetRecordTypeVisibility"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "recordTypeVisibilities",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "tabSettings": {
+                            "title": "tabSettings",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetTabSetting"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "tabSettings",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        },
+                        "userPermissions": {
+                            "title": "userPermissions",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PermissionSetUserPermission"
+                                    },
+                                    "minItems": 0
+                                }
+                            ],
+                            "propertyType": "element",
+                            "elementName": {
+                                "localPart": "userPermissions",
+                                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+                            }
+                        }
+                    }
+                }
+            ],
+            "typeType": "classInfo",
+            "typeName": {
+                "localPart": "PermissionSet",
+                "namespaceURI": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder": [
+                "applicationVisibilities",
+                "classAccesses",
+                "customPermissions",
+                "description",
+                "externalDataSourceAccesses",
+                "fieldPermissions",
+                "hasActivationRequired",
+                "label",
+                "license",
+                "objectPermissions",
+                "pageAccesses",
+                "recordTypeVisibilities",
+                "tabSettings",
+                "userPermissions"
+            ]
+        }
+    },
+    "definitions": {
+        "PermissionSetUserPermission":{
+            "type":"object",
+            "title":"PermissionSetUserPermission",
+            "required":[
+                "enabled",
+                "name"
+            ],
+            "properties":{
+                "enabled":{
+                    "title":"enabled",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"enabled",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "name":{
+                    "title":"name",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"name",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetUserPermission",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "enabled",
+                "name"
+            ]
+        },
+        "PermissionSetApplicationVisibility":{
+            "type":"object",
+            "title":"PermissionSetApplicationVisibility",
+            "required":[
+                "application",
+                "visible"
+            ],
+            "properties":{
+                "application":{
+                    "title":"application",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"application",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "visible":{
+                    "title":"visible",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"visible",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetApplicationVisibility",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "application",
+                "visible"
+            ]
+        },
+        "PermissionSetApexClassAccess":{
+            "type":"object",
+            "title":"PermissionSetApexClassAccess",
+            "required":[
+                "apexClass",
+                "enabled"
+            ],
+            "properties":{
+                "apexClass":{
+                    "title":"apexClass",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"apexClass",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "enabled":{
+                    "title":"enabled",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"enabled",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetApexClassAccess",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "apexClass",
+                "enabled"
+            ]
+        },
+        "PermissionSetCustomPermissions":{
+            "type":"object",
+            "title":"PermissionSetCustomPermissions",
+            "required":[
+                "enabled",
+                "name"
+            ],
+            "properties":{
+                "enabled":{
+                    "title":"enabled",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"enabled",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "name":{
+                    "title":"name",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"name",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetCustomPermissions",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "enabled",
+                "name"
+            ]
+        },
+        "PermissionSetExternalDataSourceAccess":{
+            "type":"object",
+            "title":"PermissionSetExternalDataSourceAccess",
+            "required":[
+                "enabled",
+                "externalDataSource"
+            ],
+            "properties":{
+                "enabled":{
+                    "title":"enabled",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"enabled",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "externalDataSource":{
+                    "title":"externalDataSource",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"externalDataSource",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetExternalDataSourceAccess",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "enabled",
+                "externalDataSource"
+            ]
+        },
+        "PermissionSetFieldPermissions":{
+            "type":"object",
+            "title":"PermissionSetFieldPermissions",
+            "required":[
+                "editable",
+                "field"
+            ],
+            "properties":{
+                "editable":{
+                    "title":"editable",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"editable",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "field":{
+                    "title":"field",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"field",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "readable":{
+                    "title":"readable",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"readable",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetFieldPermissions",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "editable",
+                "field",
+                "readable"
+            ]
+        },
+        "PermissionSetObjectPermissions":{
+            "type":"object",
+            "title":"PermissionSetObjectPermissions",
+            "required":[
+                "allowCreate",
+                "allowDelete",
+                "allowEdit",
+                "allowRead",
+                "modifyAllRecords",
+                "object",
+                "viewAllRecords"
+            ],
+            "properties":{
+                "allowCreate":{
+                    "title":"allowCreate",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"allowCreate",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "allowDelete":{
+                    "title":"allowDelete",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"allowDelete",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "allowEdit":{
+                    "title":"allowEdit",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"allowEdit",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "allowRead":{
+                    "title":"allowRead",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"allowRead",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "modifyAllRecords":{
+                    "title":"modifyAllRecords",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"modifyAllRecords",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "object":{
+                    "title":"object",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"object",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "viewAllRecords":{
+                    "title":"viewAllRecords",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"viewAllRecords",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetObjectPermissions",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "allowCreate",
+                "allowDelete",
+                "allowEdit",
+                "allowRead",
+                "modifyAllRecords",
+                "object",
+                "viewAllRecords"
+            ]
+        },
+        "PermissionSetApexPageAccess":{
+            "type":"object",
+            "title":"PermissionSetApexPageAccess",
+            "required":[
+                "apexPage",
+                "enabled"
+            ],
+            "properties":{
+                "apexPage":{
+                    "title":"apexPage",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"apexPage",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "enabled":{
+                    "title":"enabled",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"enabled",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetApexPageAccess",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "apexPage",
+                "enabled"
+            ]
+        },
+        "PermissionSetRecordTypeVisibility":{
+            "type":"object",
+            "title":"PermissionSetRecordTypeVisibility",
+            "required":[
+                "recordType",
+                "visible"
+            ],
+            "properties":{
+                "recordType":{
+                    "title":"recordType",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"recordType",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "visible":{
+                    "title":"visible",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/boolean"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"visible",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetRecordTypeVisibility",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "recordType",
+                "visible"
+            ]
+        },
+        "PermissionSetTabSetting":{
+            "type":"object",
+            "title":"PermissionSetTabSetting",
+            "required":[
+                "tab",
+                "visibility"
+            ],
+            "properties":{
+                "tab":{
+                    "title":"tab",
+                    "allOf":[
+                        {
+                            "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"tab",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                },
+                "visibility":{
+                    "title":"visibility",
+                    "allOf":[
+                        {
+                            "$ref":"#/definitions/PermissionSetTabVisibility"
+                        }
+                    ],
+                    "propertyType":"element",
+                    "elementName":{
+                        "localPart":"visibility",
+                        "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+                    }
+                }
+            },
+            "typeType":"classInfo",
+            "typeName":{
+                "localPart":"PermissionSetTabSetting",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            },
+            "propertiesOrder":[
+                "tab",
+                "visibility"
+            ]
+        },
+        "PermissionSetTabVisibility":{
+            "allOf":[
+                {
+                    "$ref":"http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                },
+                {
+                    "enum":[
+                        "None",
+                        "Available",
+                        "Visible"
+                    ]
+                }
+            ],
+            "typeType":"enumInfo",
+            "typeName":{
+                "localPart":"PermissionSetTabVisibility",
+                "namespaceURI":"http://soap.sforce.com/2006/04/metadata"
+            }
+        }
+    }
+}

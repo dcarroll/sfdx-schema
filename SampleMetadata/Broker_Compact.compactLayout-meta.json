@@ -1,0 +1,9 @@
+{
+    "CompactLayout": {
+        "fields":[
+            "test"
+        ],
+        "fullName": "layout",
+        "label": "My Layout"
+    }
+}

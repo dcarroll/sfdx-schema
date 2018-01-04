@@ -14,12 +14,17 @@ function activate(context) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('extension.saveMe', function () {
-        // The code you place here will be executed every time your command is executed
-        //workbench.action.files.save
+    let disposable = vscode.commands.registerCommand('extension.convertToJson', function () {
+        console.log(vscode.window.activeTextEditor.document.fileName);
+        converter.toJson(vscode.window.activeTextEditor.document.fileName);
+    });
 
-        // Display a message box to the user
-        //vscode.window.showInformationMessage('Hello World!');
+    // The command has been defined in the package.json file
+    // Now provide the implementation of the command with  registerCommand
+    // The commandId parameter must match the command field in package.json
+    let disposable2 = vscode.commands.registerCommand('extension.convertToXm[', function () {
+        console.log(vscode.window.activeTextEditor.document.fileName);
+        converter.toXml(vscode.window.activeTextEditor.document.fileName);
     });
 
     var watcher = vscode.workspace.createFileSystemWatcher("**/*-meta.json"); //glob search string
@@ -34,7 +39,9 @@ function activate(context) {
     });
 
     context.subscriptions.push(disposable);
+    context.subscriptions.push(disposable2);
 }
+
 exports.activate = activate;
 
 // this method is called when your extension is deactivated

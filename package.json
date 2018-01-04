@@ -2,7 +2,7 @@
     "name": "dsave",
     "displayName": "dsave",
     "description": "hook save for json to xml serialization",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "publisher": "dcarroll",
     "engines": {
         "vscode": "^1.19.0"
@@ -12,29 +12,57 @@
     ],
     "activationEvents": [
         "onCommand:extension.saveMe",
-        "onCommand:workbench.action.files.save"
+        "onCommand:workbench.action.files.save",
+        "onCommand:extension.convertToJson"
     ],
     "main": "./extension",
     "contributes": {
+        "configuration": [
+            {
+                "title": "json directory",
+                "type": "object",
+                "properties": {
+                    "dsave.jsonDir": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Root of json files",
+                        "default": "jsonsource"
+                    }
+                }
+            }
+        ],
         "commands": [
             {
                 "command": "extension.saveMe",
                 "title": "Save Me"
+            },
+            {
+                "command": "extension.convertToJson",
+                "title": "Convert to JSON"
+            },
+            {
+                "command": "extension.convertToXml",
+                "title": "Convert to Xml"
             }
         ],
         "jsonValidation": [
             {
                 "fileMatch": "**/*.field-meta.json",
-                "url": "./schemas/metadata/CustomFieldSchema.json"
+                "url": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/CustomFieldSchema.json"
             },
             {
                 "fileMatch": "**/*scratch-def.json",
-                "url": "./schemas/sfdx/scratch-def-schema.json"
-            }
-            ,
+                "url": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/sfdx/scratch-def-schema.json"
+            },
             {
-                "fileMatch": "./sfdx-project.json",
-                "url": "./schemas/sfdx/project-def-schema.json"
+                "fileMatch": "**/sfdx-project.json",
+                "url": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/sfdx/project-def-schema.json"
+            },
+            {
+                "fileMatch": "**/*.listView-meta.json",
+                "url": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/ListViewSchema.json"
             }
         ]
     },
@@ -52,6 +80,7 @@
         "xml2json": "^0.11.0"
     },
     "dependencies": {
-        "node-expat": "^2.3.16"
+        "node-expat": "^2.3.16",
+        "xml2json": "^0.11.0"
     }
 }

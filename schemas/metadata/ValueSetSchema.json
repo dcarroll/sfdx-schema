@@ -13,7 +13,7 @@
         },
         "valueSetDefinition":{
             "title":"valueSetDefinition",
-            "$ref":"ValueSetValuesDefinitionSchema.json"
+            "$ref":"https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/ValueSetValuesDefinitionSchema.json"
         },
         "valueSetName":{
             "title":"valueSetName",

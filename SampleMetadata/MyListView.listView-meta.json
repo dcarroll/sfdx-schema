@@ -1,0 +1,24 @@
+{
+    "ListView":{
+        "columns":[
+            "one"
+        ],
+        "sharedTo": {
+            "":""
+        },
+        "queue":null,
+        "fullName": "",
+        "booleanFilter":null,
+        "division":null,
+        "filters":[
+            {
+                "field":null,
+                "operation":"cool",
+                "value":null
+            }
+        ],
+        "filterScope":"Everything",
+        "label":null,
+        "language":""
+    }
+}

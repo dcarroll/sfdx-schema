@@ -1,0 +1,475 @@
+{
+    "PermissionSet": {
+        "applicationVisibilities":[
+            {
+                "application": "DreamHouse",
+                "visible": true
+            }
+        ],
+        "classAccesses": [
+            {
+                "apexClass": "BotController",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotField",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotHandler",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotItem",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotMessage",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotMessageButton",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotRecord",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotResponse",
+                "enabled": true
+            },
+            {
+                "apexClass": "BotTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "DreamHouseSampleDataController",
+                "enabled": true
+            },
+            {
+                "apexClass": "EinsteinVisionController",
+                "enabled": true
+            },
+            {
+                "apexClass": "EinsteinVisionControllerTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerAddTwoNumbers",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerCostCenter",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerEmployeeId",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerFileUpload",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerFindAccount",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerFindContact",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerFindProperties",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerFindPropertiesByBedrooms",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerHello",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerHelp",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerHelpTopic",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerImageBasedSearch",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerMyOpenCases",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerNext",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerPipeline",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerQuarter",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerSOQL",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerTopOpportunities",
+                "enabled": true
+            },
+            {
+                "apexClass": "HandlerTravelApproval",
+                "enabled": true
+            },
+            {
+                "apexClass": "HttpFormBuilder",
+                "enabled": true
+            },
+            {
+                "apexClass": "JWT",
+                "enabled": true
+            },
+            {
+                "apexClass": "JWTBearerFlow",
+                "enabled": true
+            },
+            {
+                "apexClass": "LIFXController",
+                "enabled": true
+            },
+            {
+                "apexClass": "LIFXControllerTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "PostPriceChangeToSlack",
+                "enabled": true
+            },
+            {
+                "apexClass": "PostPriceChangeToSlackTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "PropertyController",
+                "enabled": true
+            },
+            {
+                "apexClass": "PropertyControllerTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "PropertyPagedResult",
+                "enabled": true
+            },
+            {
+                "apexClass": "PushPriceChangeNotification",
+                "enabled": true
+            },
+            {
+                "apexClass": "PushPriceChangeNotificationTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "RejectDuplicateFavoriteTest",
+                "enabled": true
+            },
+            {
+                "apexClass": "SlackOpportunityPublisher",
+                "enabled": true
+            },
+            {
+                "apexClass": "SlackOpportunityPublisherTest",
+                "enabled": true
+            }
+        ],
+        "fieldPermissions": [
+            {
+                "editable": true,
+                "field": "Bot_Command__c.Active__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Bot_Command__c.Apex_Class__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Bot_Command__c.Pattern__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Bot_Command__c.Sample_Utterance__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Broker__c.Email__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Broker__c.Mobile_Phone__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Broker__c.Phone__c",
+                "readable": true
+            },
+            {
+                "editable": false,
+                "field": "Broker__c.Picture_IMG__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Broker__c.Picture__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Broker__c.Title__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Favorite__c.Property__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Favorite__c.User__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Address__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Assessed_Value__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Baths__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Beds__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Broker__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.City__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Date_Agreement__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Date_Closed__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Date_Contracted__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Date_Listed__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Date_Pre_Market__c",
+                "readable": true
+            },
+            {
+                "editable": false,
+                "field": "Property__c.Days_On_Market__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Description__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Location__c",
+                "readable": true
+            },
+            {
+                "editable": false,
+                "field": "Property__c.Picture_IMG__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Picture__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Price__c",
+                "readable": true
+            },
+            {
+                "editable": false,
+                "field": "Property__c.Record_Link__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.State__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Status__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Tags__c",
+                "readable": true
+            },
+            {
+                "editable": false,
+                "field": "Property__c.Thumbnail_IMG__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Thumbnail__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Title__c",
+                "readable": true
+            },
+            {
+                "editable": true,
+                "field": "Property__c.Zip__c",
+                "readable": true
+            }
+        ],
+        "hasActivationRequired": false,
+        "label": "dreamhouse",
+        "objectPermissions": [
+            {
+                "allowCreate": true,
+                "allowDelete": true,
+                "allowEdit": true,
+                "allowRead": true,
+                "modifyAllRecords": true,
+                "object": "Bot_Command__c",
+                "viewAllRecords": true
+            },
+            {
+                "allowCreate": true,
+                "allowDelete": true,
+                "allowEdit": true,
+                "allowRead": true,
+                "modifyAllRecords": true,
+                "object": "Broker__c",
+                "viewAllRecords": true
+            },
+            {
+                "allowCreate": true,
+                "allowDelete": true,
+                "allowEdit": true,
+                "allowRead": true,
+                "modifyAllRecords": true,
+                "object": "Favorite__c",
+                "viewAllRecords": true
+            },
+            {
+                "allowCreate": true,
+                "allowDelete": true,
+                "allowEdit": true,
+                "allowRead": true,
+                "modifyAllRecords": true,
+                "object": "Property__c",
+                "viewAllRecords": true
+            }
+        ],
+        "pageAccesses": [
+            {
+                "apexPage": "DreamHouseSampleData",
+                "enabled": true
+            },
+            {
+                "apexPage": "HeatMap",
+                "enabled": true
+            },
+            {
+                "apexPage": "HeatMapMock",
+                "enabled": true
+            }
+        ],
+        "tabSettings": [
+            {
+                "tab": "Bot_Command__c",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Broker__c",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Command_Center",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Einstein_Vision",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Heat_Map",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Heat_Map_Mock",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Property_Explorer1",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Property__c",
+                "visibility": "Visible"
+            },
+            {
+                "tab": "Sample_Data_Import",
+                "visibility": "Visible"
+            }
+        ]
+    }
+}

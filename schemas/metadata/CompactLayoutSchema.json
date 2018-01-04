@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "CompactLayout": {
+            "type": "object",
+            "title": "CompactLayout",
+            "required": [
+                "label"
+            ],
+            "allOf": [
+                {
+                    "$ref": "https://s3-us-west-2.amazonaws.com/djcarroll/schemas/metadata/MetadataSchema.json"
+                },
+                {
+                    "type": "object",
+                    "title": "CompactLayout",
+                    "properties": {
+                        "fields": {
+                            "title": "fields",
+                            "allOf": [
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                                    },
+                                    "minItems": 0
+                                }
+                            ]
+                        },
+                        "label": {
+                            "title": "label",
+                            "allOf": [
+                                {
+                                    "$ref": "http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema#/definitions/string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

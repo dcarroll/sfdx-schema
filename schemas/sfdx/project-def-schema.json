@@ -12,9 +12,23 @@
             "type": "string",
             "description": "The global namespace that is used with a package. The namespace must be registered with an org that is associated with your Dev Hub org. This namespace is assigned to scratch orgs created with the org:create command."
         },
+        "sfdcLoginUrl": {
+            "title": "The login URL that the force:auth commands use.",
+            "type": "string",
+            "description": "The default is login.salesforce.com. Override the default value if you want users to authorize to a specific Salesforce instance. For example, if you want to authorize into a sandbox org, set this parameter to test.salesforce.com.\nIf you do not specify a default login URL here, or if you run force:auth outside the project, you specify the instance URL when authorizing the org."
+        },
+        "sourceApiVersion": {
+            "title": "The API version that the source is compatible with",
+            "type": "string",
+            "description": "The SourceApiVersion determines the fields retrieved for each metadata type. For example, an icon field was added to the CustomTab for API version 14.0. If you retrieve components for version 13.0 or earlier, the components do not include the icon field."
+        },
         "packageDirectories": {
             "title": "Source Directories for Packages",
             "type": "array",
+            "required":[
+                "path",
+                "default"
+            ],
             "items": {
                 "type": "object",
                 "properties": {
